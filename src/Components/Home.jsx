@@ -9,7 +9,7 @@ const Home = () => {
 
      
 
-      <div><p>{token}</p></div>
+      <div><p>TOKEN:{token}</p></div>
       <div><a href="/login">Login</a></div>
       <div><a href="/register">Register</a></div>
     </div>
