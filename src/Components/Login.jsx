@@ -20,7 +20,7 @@ console.log(token)
       localStorage.setItem('userName', email); // Assuming email is used as the username
       setToken(response.data.token);
       setUserName(email); // Set the username in context
-      Naviagte('/', true); // Redirect to the profile page
+      Naviagte('/profile', true); // Redirect to the profile page
     } catch (err) {
       console.error('Login failed', err);
     }
