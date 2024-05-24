@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import {TokenContext} from '../context/userContext'
 import '../App.css'
 const Home = () => {
-  const {token, setToken} =useContext(TokenContext)
+  const {token} =useContext(TokenContext)
   return (
 <div className='App'>
 
