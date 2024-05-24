@@ -19,7 +19,7 @@ const Navbar = () => {
           <a className="nav-link active text-warning" aria-current="page" href="/profile">Profile</a>
         </li>
         <li className="nav-item">
-<button className='text-warning'onClick={handleClick} >Clear</button>        </li>
+<button className='btn text-warning'onClick={handleClick} >Clear</button>        </li>
         
       </ul>
       
