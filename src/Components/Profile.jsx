@@ -1,34 +1,16 @@
-// frontend/src/components/Profile.js
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+const { useContext } = require("react");
+const { TokenContext } = require("../context/userContext");
 
 const Profile = () => {
-  const [profile, setProfile] = useState({});
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get('/api/user/profile', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
-        setProfile(response.data);
-      } catch (err) {
-        console.error('Failed to fetch profile', err);
-      }
-    };
-
-    fetchProfile();
-  }, []);
+  const { token, userName } = useContext(TokenContext);
 
   return (
     <div>
-      <h1>Profile</h1>
-      <p>Email: {profile.email}</p>
-      <p>Name: {profile.name}</p>
-      <p>Company: {profile.company}</p>
+      <h2>Profile Page</h2>
+      <p className="text-success">Welcome, {userName}!</p>
+      <p className="text-success">Your token: {token}</p>
+      <p><a href="/">Go to Home </a></p>
     </div>
   );
 };
-
-export default Profile;
+export default Profile
