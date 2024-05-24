@@ -1,6 +1,10 @@
 import React from 'react'
 
 const Navbar = () => {
+   function handleClick(){
+    localStorage.clear();
+
+    }
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -14,6 +18,8 @@ const Navbar = () => {
         <li className="nav-item">
           <a className="nav-link active text-warning" aria-current="page" href="/profile">Profile</a>
         </li>
+        <li className="nav-item">
+<button className='text-warning'onClick={handleClick} >Clear</button>        </li>
         
       </ul>
       
