@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
    function handleClick(){
     localStorage.clear();
-
+    window.location.reload();
     }
   return (
     <div>
